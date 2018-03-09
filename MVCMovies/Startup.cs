@@ -25,6 +25,8 @@ namespace MVCMovies
         {
             services.AddMvc();
 
+            services.AddProgressiveWebApp();
+
             services.AddDbContext<MVCMoviesContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MVCMoviesContext")));
         }
